@@ -90,7 +90,7 @@ Fig. \ref{fig:studyarea-1} and \ref{fig:studyarea-2}.
 
 \begin{figure}[!h]
   \vspace{-0.5cm} \centering \subfigure[Map of Portugal and the study
-  area highlighted within the red
+  area highlighted with the red
   rectangle.]{\label{fig:po-map}\includegraphics[scale=0.5]{fig/po-map.jpeg}}
   \hspace{+0.3cm} \subfigure[Zoomed in bathymetry showing the Nazar\'e
   canyon-Berlengas area (isobaths with depth in meters) and its
@@ -101,7 +101,10 @@ Fig. \ref{fig:studyarea-1} and \ref{fig:studyarea-2}.
   assimilation of temperature and salinity measurements collected by
   CTD profiles and
   current-meters.]{\label{fig:model}\includegraphics[scale=0.50]{fig/model.jpeg}}
-  \caption{Detailed views of the proposed study area for \proje.}
+  \caption{\subref{fig:po-map} \& \subref{fig:domain} show detailed
+    views of the proposed study area for \proje, while
+    \subref{fig:model} shows model predictions for the dynamic region
+    driven by bathymetry and external forcing.}
   \label{fig:studyarea-1}
 \end{figure}
 
@@ -115,14 +118,13 @@ Fig. \ref{fig:studyarea-1} and \ref{fig:studyarea-2}.
   % \hspace{+0.3cm} 
   \subfigure[]{\label{fig:tmpchange}\includegraphics[scale=0.285]{fig/temp-change.png}}
   \subfigure[]{\label{fig:chlchange}\includegraphics[scale=0.285]{fig/chl-change.png}}
-  \caption{300m resolution remote sensing images from Sentinel 3
-    images from September 6\textsuperscript{th} 2019 showing along
-    shelf \subref{fig:chlshelf} and zoomed in Chlrophyll filaments
+  \caption{300m resolution remote sensing images from Sentinel 3 from
+    September 6\textsuperscript{th} 2019 showing along shelf
+    \subref{fig:chlshelf} and zoomed in Chlrophyll filaments
     \subref{fig:chldomain} emanating from the proposed study area of
     Nazar\'e canyon-Berlengas. \subref{fig:tmpchange} and
     \subref{fig:chlchange} show time series with rapid changes of
-    temperature and chlorophyll respectively, in the area, in a matter
-    of days.}
+    temperature and chlorophyll respectively in the area.}
   \label{fig:studyarea-2}
 \end{figure}
 
@@ -141,7 +143,9 @@ islands.
 \univ will provide the bulk of the robotic assets including
 aerial, surface and underwater vehicles as also the team to operate
 them. The team will be split between being based in Berlengas, the
-research vessel and also provide remote monitoring from Porto.
+research vessel and also provide remote monitoring from Porto. \soc
+will provide at least one glider to operate outside the shelf to
+augment model observations in the meso-scale.
 
 Our approximate leveraged budget for this exercise is expected to be
 $\sim \$100$ K to support this 21 day (3 week) operation. This
@@ -153,15 +157,54 @@ support software development to extend observation quality control,
 assimilation and ML based approaches to entropy reduction in modeling.
 
 \paragraph{Roles and responsibilities} \univ will be the lead
-organization and coordinate all activities. Funding requested will
-primarily support students and staff in Porto for software development
-and operations. \inst will provide the assimilation, modeling and
+organization, provide aerial, surface and underwater vehicles,
+communication equipment and command/control software while
+coordinating all activities. Funding requested will primarily support
+students and staff in Porto for software development and
+operations. \inst will provide the assimilation, modeling and
 prediction with shore-side models. In addition \inst will provide
 access to their research vessel as well as a RHIB or rigid boat. \mit
 will support \inst for \texttt{HOPS} modeling and augmentation for ML
 capabilities within. \colo and \ave will work on making biological
 measurements and providing analysis and data to augment \inst
-modeling. 
+modeling. Table \ref{tab:roles} summarizes the roles and contributions
+of all partners.
+
+\begin{table}[!t]
+  \centering
+  \vspace{-0.5cm}
+  \begin{tabular}{|p{1.5cm}|p{8cm}|p{6cm}|}\hline 
+    \rowcolor{Gray}
+    \bfseries Inst. &\bfseries Role &\bfseries Contributions\\
+    \hline
+    \org & Co-Lead organization, reporting, experiment design, outreach&\\
+    \hline
+    \univ & Co-Lead organization, CONOPS (concept of ops) design and
+            implementation, software engineering
+                                    &aerial/surface/underwater
+                                      vehicles, comms,operations team\\
+    \hline
+    \inst & Physical Oceanography, Modeling, observation assimilation, prediction&\inst
+                                                            research
+                                                            vessel and
+                                                            RHIB/rigid
+                                                            boats,
+                                                            local outreach\\
+    \hline
+    \ave & Biological sampling, lab analysis&\\
+    \hline
+    \soc & Physical Oceanography, glider operations& Gliders\\
+    \hline
+    \colo & Biological Oceanpgraphy, sampling&\\
+    \hline
+    \mit & Modeling, Machine Learning and entropy reduction&\\
+    \hline
+  \end{tabular}
+  \caption{Roles and responsibilities and in-kind contributions in
+    \proj for the 2021 Sept-Oct field experiment. All team members
+    will be involved in experiment design and publishing post experiment.}
+  \label{tab:roles}
+\end{table}
 
 \paragraph{Operational Considerations} While most experiments in the
 coastal zone rely on ship-board measurements and gliders, the
